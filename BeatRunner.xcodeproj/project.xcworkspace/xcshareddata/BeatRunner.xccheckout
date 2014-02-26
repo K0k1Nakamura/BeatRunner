@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E0DB3951-365D-4F66-BCDC-34A9D8DE3016</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BeatRunner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB1161F8-9D60-4103-9B0F-6FC447B01DB7</key>
+		<string>https://github.com/K0k1Nakamura/BeatRunner.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BeatRunner.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB1161F8-9D60-4103-9B0F-6FC447B01DB7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/K0k1Nakamura/BeatRunner.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB1161F8-9D60-4103-9B0F-6FC447B01DB7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB1161F8-9D60-4103-9B0F-6FC447B01DB7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BeatRunner</string>
+		</dict>
+	</array>
+</dict>
+</plist>

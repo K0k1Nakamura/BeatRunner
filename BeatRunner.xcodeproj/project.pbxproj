@@ -21,6 +21,7 @@
 		7FB09F7118BC7A790016A298 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB09F5318BC7A790016A298 /* UIKit.framework */; };
 		7FB09F7918BC7A790016A298 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FB09F7718BC7A790016A298 /* InfoPlist.strings */; };
 		7FB09F7B18BC7A790016A298 /* BeatRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB09F7A18BC7A790016A298 /* BeatRunnerTests.m */; };
+		7FB09F8518BC7A890016A298 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB09F8418BC7A890016A298 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7FB09F7618BC7A790016A298 /* BeatRunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeatRunnerTests-Info.plist"; sourceTree = "<group>"; };
 		7FB09F7818BC7A790016A298 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7FB09F7A18BC7A790016A298 /* BeatRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeatRunnerTests.m; sourceTree = "<group>"; };
+		7FB09F8418BC7A890016A298 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB09F8518BC7A890016A298 /* MediaPlayer.framework in Frameworks */,
 				7FB09F5218BC7A790016A298 /* CoreGraphics.framework in Frameworks */,
 				7FB09F5418BC7A790016A298 /* UIKit.framework in Frameworks */,
 				7FB09F5018BC7A790016A298 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		7FB09F4E18BC7A790016A298 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FB09F8418BC7A890016A298 /* MediaPlayer.framework */,
 				7FB09F4F18BC7A790016A298 /* Foundation.framework */,
 				7FB09F5118BC7A790016A298 /* CoreGraphics.framework */,
 				7FB09F5318BC7A790016A298 /* UIKit.framework */,

@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface ViewController : UIViewController
+
+//UI部分
+@property (weak, nonatomic) IBOutlet UILabel *BPMViewer;
+- (IBAction)BPMBtn:(id)sender;
+- (IBAction)NextBtn:(id)sender;
+- (IBAction)PrevBtn:(id)sender;
+- (IBAction)StartOrStopBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *NowPlayingViewer;
+
+
+//音楽プレイヤー
+@property MPMusicPlayerController *player;
+@property NSNotificationCenter *ncenter;
 
 @end
