@@ -11,6 +11,7 @@
 @interface ViewController () {
     //UI部
     BOOL _isPlaying;
+    NSTimer *_sliderTimer;
     
     //タイマー、BPM取得部における変数
     NSTimer *_timer;
@@ -22,6 +23,8 @@
     //音楽データの配列、BPM
     NSMutableArray *_musicItems;
     int _BPMnum;
+    
+    
 
 }
 
@@ -48,6 +51,13 @@
     
     //配列の設定
     _musicItems = [NSMutableArray array];
+    
+    //スライダー用タイマー
+    _sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                    target: self
+                                                  selector:@selector(SliderAction)
+                                                  userInfo:nil
+                                                   repeats:YES];
 }
 
 - (void)handle_NowPlayingItemChanged {
@@ -86,12 +96,11 @@
         _startDate = [NSDate date];
         
         //タイマー開始
-        _timer = [NSTimer
-                 scheduledTimerWithTimeInterval:0.2
-                 target: self
-                 selector:@selector(TimerAction)
-                 userInfo:nil
-                 repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.2
+                                                  target: self
+                                                selector:@selector(TimerAction)
+                                                userInfo:nil
+                                                 repeats:YES];
         
     } else {
         _dateNow = [NSDate date];
@@ -167,7 +176,12 @@
 }
 
 - (IBAction)PrevBtn:(id)sender {
-    [_player skipToPreviousItem];
+    
+    if (_player.currentPlaybackTime < 3) {
+        [_player skipToPreviousItem];
+    } else {
+        [_player skipToBeginning];
+    }
 }
 
 - (IBAction)StartOrStopBtn:(id)sender {
@@ -177,5 +191,19 @@
         [_player play];
     
     _isPlaying = !_isPlaying;
+}
+
+
+- (IBAction)setTimeLinePosition:(id)sender {
+    MPMediaItem *playingItem = [_player nowPlayingItem];
+
+    NSTimeInterval time = [[playingItem valueForProperty:MPMediaItemPropertyPlaybackDuration] doubleValue] * _timelineSlider.value;
+    
+    [_player setCurrentPlaybackTime:time];
+}
+
+- (void)SliderAction {
+    MPMediaItem *playingItem = [_player nowPlayingItem];
+    _timelineSlider.value = _player.currentPlaybackTime / [[playingItem valueForProperty:MPMediaItemPropertyPlaybackDuration] doubleValue];
 }
 @end

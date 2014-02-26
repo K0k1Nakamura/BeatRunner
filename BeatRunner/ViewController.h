@@ -23,5 +23,7 @@
 //音楽プレイヤー
 @property MPMusicPlayerController *player;
 @property NSNotificationCenter *ncenter;
+@property (weak, nonatomic) IBOutlet UISlider *timelineSlider;
+- (IBAction)setTimeLinePosition:(id)sender;
 
 @end
