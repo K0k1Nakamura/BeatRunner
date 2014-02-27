@@ -53,7 +53,7 @@
     _musicItems = [NSMutableArray array];
     
     //スライダー用タイマー
-    _sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1
+    _sliderTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                                     target: self
                                                   selector:@selector(SliderAction)
                                                   userInfo:nil
@@ -177,7 +177,7 @@
 
 - (IBAction)PrevBtn:(id)sender {
     
-    if (_player.currentPlaybackTime < 3) {
+    if (_player.currentPlaybackTime < 6) {
         [_player skipToPreviousItem];
     } else {
         [_player skipToBeginning];
@@ -200,6 +200,8 @@
     NSTimeInterval time = [[playingItem valueForProperty:MPMediaItemPropertyPlaybackDuration] doubleValue] * _timelineSlider.value;
     
     [_player setCurrentPlaybackTime:time];
+    
+    _timelineSlider.value = _player.currentPlaybackTime / [[playingItem valueForProperty:MPMediaItemPropertyPlaybackDuration] doubleValue];
 }
 
 - (void)SliderAction {
